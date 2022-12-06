@@ -1,0 +1,23 @@
+<h1>Categories</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>List</th>
+      <th colspan="4">Action</th>
+    </tr>
+  </thead>
+  <tbody>
+  <% @categories.each do |category| %>
+    <tr>
+      <td> <%= category.category %> </td>
+      <td> <%= link_to 'show', category_path(category.id) %> </td>
+      <td> <%= link_to 'edit', edit_category_path(category.id) %> </td>
+      <td> <%= link_to 'delete', category_path(category.id), data:{turbo_method: :delete, turbo_confirm: "Are you sure"} %> </td>
+      <td> <%= link_to 'add task', new_category_task_path(category) %> </td>
+    </tr>
+  <%end%>
+  </tbody>
+</table>
+
+<%= link_to 'Create a category', new_category_path%>

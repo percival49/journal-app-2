@@ -8,12 +8,12 @@ class CategoriesControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should get new" do
-    get new_category_path
+    get '/categories/new'
     assert_response :success
   end
 
   test "should get create" do
-    post create_category_path, params: { category: {details: "test details"} }
+    post categories_path, params: { category: {category: "test category"} }
     assert_response :redirect
   end
 

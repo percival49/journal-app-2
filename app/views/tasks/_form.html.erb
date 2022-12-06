@@ -1,0 +1,5 @@
+<%= form_with model: [@category, @task] do |f| %>
+  <%= f.text_field :task, placeholder: 'task name' %><br/>
+  <%= f.text_field :details, placeholder: 'details' %><br/>
+  <%= f.submit 'Submit'%>
+<%end%>

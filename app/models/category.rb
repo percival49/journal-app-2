@@ -1,3 +1,4 @@
 class Category < ApplicationRecord
-  validates :details, presence: true
+  has_many :tasks
+  validates :category, presence: true
 end

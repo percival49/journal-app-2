@@ -1,0 +1,14 @@
+<h1><%= @category.category %></h1>
+
+<ul>
+  <% @category.tasks.each do |task| %>
+    <li> 
+      <%= task.task %> 
+      <%= link_to 'show', category_task_path(@category,task) %>
+      <%= link_to 'edit', edit_category_task_path(@category, task) %>
+    </li>
+  <%end%>
+</ul>
+
+
+<%= link_to 'return',  categories_path%>
