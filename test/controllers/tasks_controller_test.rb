@@ -2,8 +2,8 @@ require "test_helper"
 
 class TasksControllerTest < ActionDispatch::IntegrationTest
   test "should get index" do
-    get tasks_path
-    #change to category_tasks_path, dapat ang task index nasa category show
+    get category_tasks_path
+    #CHECKED change to category_tasks_path, dapat ang task index nasa category show
     assert_response :success
   end
 
